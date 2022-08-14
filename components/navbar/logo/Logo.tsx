@@ -9,7 +9,7 @@ type LogoProps = {
 export const Logo = ({src, alt}: LogoProps) => {
   const windowSize = useWindowDimensions();
   const mobile = screenBreakPoints.mobileMaxWidth;
-  const isMobile = windowSize.width <= mobile;
+  const isMobile = (windowSize?.width ?? 0.0) <= mobile;
 
   return (
     <Image

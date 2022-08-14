@@ -15,7 +15,7 @@ export const LandingPage = () => {
       </div>
       <div className={styles.overlayDiv}>
         <div className={styles.mainText}>
-          <h2>CREATIVE</h2>
+          <h2>THE CREATIVE</h2>
           <h5>DEVELOPER</h5>
         </div> 
       </div>
