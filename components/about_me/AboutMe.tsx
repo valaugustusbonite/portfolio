@@ -2,15 +2,17 @@ import React from 'react'
 import styles from 'components/about_me/AboutMe.module.scss';
 import { VerticalImage } from 'components/vertical_masked_image';
 import dp from 'public/assets/dp.jpg';
+import { useWindowDimensions, screenBreakPoints } from 'utils';
+import { HorizontalImage } from 'components/horizontal_masked_image';
 
 export const AboutMe = () => {
 
   return (
     <section className={styles.aboutMe}>
-      <div className={styles.leftSection}>
-        <VerticalImage src={dp} alt={'personal-picture'}/>
+      <div className={styles.imageSection}>
+        <AboutMeAsset />
       </div>
-      <div className={styles.rightSection}>
+      <div className={styles.textSection}>
         <div className={styles.descriptionContainer}>
           <h1>Hello!</h1>
           <p>
@@ -24,9 +26,24 @@ export const AboutMe = () => {
       </div>
       <div className={styles.overlayDiv}>
         <div className={styles.sectionHeader}>
-          ABOUT ME
+          <h1>
+            ABOUT ME
+          </h1>
         </div>
       </div>
     </section>
+  )
+}
+
+const AboutMeAsset = () => {
+  const windowSize = useWindowDimensions();
+  const nonDesktop = (windowSize?.width ?? 0.0) <= screenBreakPoints.tabletMaxWidth;
+
+  if (nonDesktop) {
+    return <HorizontalImage src={dp} alt={'personal-picture'}/>
+  }
+  
+  return (
+    <VerticalImage src={dp} alt={'personal-picture'}/>
   )
 }

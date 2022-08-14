@@ -1,0 +1,45 @@
+@use 'styles/variables';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: variables.$dark-primary;
+}
+
+a, h1, h2, h3, h4, h5, p {
+  color: #fff;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: white;
+//     background-color: red;
+//   }
+// }
+
+// .light {
+//   a, h1, h2, h3, h4, h5, p {
+//     color: variables.$light-primary;
+//     background-color: variables.$light-primary;
+//   }
+// }
+
+// .dark {
+//   a, h1, h2, h3, h4, h5, p {
+//     color: variables.$dark-primary;
+//     background-color: variables.$dark-primary;
+//   }
+// }

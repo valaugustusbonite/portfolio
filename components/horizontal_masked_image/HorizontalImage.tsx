@@ -1,15 +1,15 @@
 import React from 'react'
-import styles from 'components/vertical_masked_image/VerticalImage.module.scss'
+import styles from 'components/horizontal_masked_image/HorizontalImage.module.scss'
 import Image, { StaticImageData } from 'next/image';
 
-type VerticalImageProps = {
+type HorizontalImageProps = {
   src: string | StaticImageData
   alt: string
 }
 
-export const VerticalImage = ({ src, alt }: VerticalImageProps) => {
+export const HorizontalImage = ({ src, alt }: HorizontalImageProps) => {
   return (
-    <div className={styles.verticalImage}>
+    <div className={styles.horizontalImage}>
         <Image
           src={src}
           alt={alt}
