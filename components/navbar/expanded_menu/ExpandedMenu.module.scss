@@ -1,8 +1,13 @@
+.expandedMenu {
+  display: flex;
+  flex-direction: row;
+}
+
 .menuItem {
   p {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     text-align: end;
-    padding: 12px 0;
+    margin: 12px 0px 12px 100px;
   }
 }

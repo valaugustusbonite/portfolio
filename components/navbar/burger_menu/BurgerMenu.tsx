@@ -6,7 +6,7 @@ export const BurgerMenu = () => {
     <div>
       <ImMenu 
        size={35}
-       color={'#31E2D5'}
+       color={'#3AAFA9'}
       />
     </div>
   )

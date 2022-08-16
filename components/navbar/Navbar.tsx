@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from 'components/navbar/Navbar.module.scss';
-import logo from 'public/assets/white_logo.png';
+import logo from 'public/assets/black-logo.png';
 import { Logo } from 'components/navbar/logo'
 import { BurgerMenu } from 'components/navbar/burger_menu'
 import { ExpandedMenu } from 'components/navbar/expanded_menu'
@@ -9,7 +9,9 @@ import { useWindowDimensions, screenBreakPoints } from 'utils';
 export const Navbar = () => {
   return (
     <nav className={styles.navbarContainer}>
-      <Logo src={logo} alt='logo' />
+      <div className={styles.logoContainer}>
+        <Logo src={logo} alt='logo' />
+      </div>
       <NavbarMenu />
     </nav>
   )
@@ -17,7 +19,7 @@ export const Navbar = () => {
 
 const NavbarMenu = () => {
   const windowSize = useWindowDimensions();
-  const isDesktop = windowSize.width >= screenBreakPoints.desktopMaxWidth;
+  const isDesktop = (windowSize?.width ?? 0.0) >= screenBreakPoints.desktopMaxWidth;
 
   if (isDesktop) {
     return(
