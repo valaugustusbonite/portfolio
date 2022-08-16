@@ -2,16 +2,16 @@ import React from 'react'
 import styles from 'components/navbar/expanded_menu/ExpandedMenu.module.scss'
 
 let labels: string[] = [
-  'About',
-  'Projects',
-  'Experience',
-  'Skills',
-  'Contact',
+  'ABOUT',
+  'PROJECTS',
+  'EXPERIENCE',
+  'SKILLS',
+  'CONTACT',
 ]
 
 export const ExpandedMenu = () => {
   return (
-    <div>
+    <div className={styles.expandedMenu}>
       {
         labels.map((item) => <MenuItem key={labels.indexOf(item)} label={item}/>)
       }
@@ -27,7 +27,7 @@ type MenuItemProps = {
 const MenuItem = ({label, onClick}: MenuItemProps) => {
   return(
     <div className={styles.menuItem}>
-      <p>{label}.</p>
+      <p>{label}</p>
     </div>
   )
 }

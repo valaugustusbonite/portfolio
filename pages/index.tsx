@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <LandingPage />
-      <AboutMe />
+      {/* <AboutMe /> */}
     </div>
   )
 }
