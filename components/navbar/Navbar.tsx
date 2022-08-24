@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from 'components/navbar/Navbar.module.scss';
 import logo from 'public/assets/black-logo.png';
-import { Logo } from 'components/navbar/logo'
+import { Logo } from 'components/common/logo'
 import { BurgerMenu } from 'components/navbar/burger_menu'
 import { ExpandedMenu } from 'components/navbar/expanded_menu'
 import { useWindowDimensions, screenBreakPoints } from 'utils';
