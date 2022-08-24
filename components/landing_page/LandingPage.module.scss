@@ -16,21 +16,30 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
 
     .subTitle {
-      flex-direction: column;
-      text-align: start;
+      display: flex;
+      flex-direction: row;
       padding:  20px;
+      width: 100%;
+      justify-content: space-between;
 
-      h3 {
-        font-size: 22px;
-        font-weight: 500;
+      .subHeaderText {
+        h3 {
+          font-size: 22px;
+          font-weight: 500;
+        }
+  
+        p {
+          font-size: 16px;
+          font-weight: 100;
+        }
       }
 
-      p {
-        font-size: 16px;
-        font-weight: 100;
+      .socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
       }
     }
   }
@@ -42,8 +51,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    z-index: 2;
+    justify-content: space-between;
+    z-index: 1;
 
     .mainText {
       position: absolute;
@@ -90,7 +99,6 @@
     .navbarContainer {
 
       .subTitle {
-        flex-direction: column;
         padding:  45px;
   
         h3 {
@@ -129,9 +137,9 @@
     .floatingImages {
       .imageOne {
         position: absolute;
-        top: 25%;
-        left: 50%;
-        height: 45%;
+        top: 20%;
+        left: 45%;
+        height: 60%;
         width: 20%;
         background-color: variables.$dark-primary;
       }
@@ -142,7 +150,7 @@
         width: 15%;
         bottom: 0%;
         background-color: variables.$dark-primary;
-        left: 75%
+        left: 68%
       }
   
       .imageThree {
