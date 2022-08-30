@@ -13,13 +13,9 @@ export const HorizontalImage = ({ src, alt }: HorizontalImageProps) => {
         <Image
           src={src}
           alt={alt}
-          layout='fill'
           objectFit='cover'
-          className={styles.image}
         >
         </Image>
-        {/* <div className={styles.overlayDiv}>
-        </div> */}
     </div>
   )
 }

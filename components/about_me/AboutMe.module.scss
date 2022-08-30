@@ -8,15 +8,21 @@
   position: relative;
 
   .imageSection {
-    height: 55%;
+    height: 52%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
+
+    .backgroundImage {
+      position: relative;
+      height: 90%;
+      width: 100%;
+    }
   }
 
   .textSection {
-    height: 45%;
+    height: 58%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,30 +31,15 @@
       padding: 0 65px;
 
       h1 {
-        font-size: 30px;
-        font-weight: lighter;
+        font-size: 45px;
+        font-weight: bold;
         margin-bottom: 20px;
       }
   
       p {
-        font-weight: lighter;
         text-align: justify;
-        font-size: 14px;
-      }
-    }
-  }
-
-  .overlayDiv {
-    position: absolute;
-    top: 8%;
-    left: 5%;
-
-    .sectionHeader {
-
-      h1 {
-        font-size: 60px;
-        color: #fff;
-        font-weight: 500
+        font-size: 16px;
+        font-weight: 350;
       }
     }
   }
@@ -56,29 +47,36 @@
 
 @media (min-width: variables.$tablet-max-width) {
   .aboutMe {
-    flex-direction: row;
+    flex-direction: row-reverse;
 
     .imageSection {
-      width: 40%;
+      width: 50%;
       height: 100%;
-
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      
+      .backgroundImage {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
     }
     
     .textSection {
       width: 60%;
       height: 100%;
-      padding-top: 100px;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
     }
 
-    .overlayDiv {
-      top: 20%;
-      left: 35%;
-
-      .sectionHeader {
-        padding-right: 80px;
-        border-right: solid 1px variables.$dark-accent;
-  
-      }
+    .socials {
+      position: absolute;
+      z-index: 2;
+      bottom: 45px;
+      left: 85px;
     }
   }
 }
@@ -90,19 +88,11 @@
       .descriptionContainer {
   
         h1 {
-          font-size: 60px;
+          font-size: 85px;
         }
     
         p {
-          font-size: 16px;
-        }
-      }
-    }
-
-    .overlayDiv {
-      .sectionHeader {
-        h1 {
-          font-size: 100px;
+          font-size: 18px;
         }
       }
     }

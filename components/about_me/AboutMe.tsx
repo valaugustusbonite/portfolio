@@ -1,11 +1,14 @@
 import React from 'react'
 import styles from 'components/about_me/AboutMe.module.scss';
-import { VerticalImage } from 'components/vertical_masked_image';
-import dp from 'public/assets/dp.jpg';
-import { useWindowDimensions, screenBreakPoints } from 'utils';
-import { HorizontalImage } from 'components/horizontal_masked_image';
+import dp from 'public/assets/landing_page_bg.svg';
+import Image from 'next/image';
+import { screenBreakPoints, useWindowDimensions } from 'utils';
+import { SocialMedia } from 'components/social_media';
 
 export const AboutMe = () => {
+  const windowSize = useWindowDimensions();
+  const mobile = screenBreakPoints.tabletMaxWidth;
+  const isDesktop = (windowSize?.width ?? 0.0) >= mobile;
 
   return (
     <section className={styles.aboutMe}>
@@ -14,7 +17,7 @@ export const AboutMe = () => {
       </div>
       <div className={styles.textSection}>
         <div className={styles.descriptionContainer}>
-          <h1>Hello!</h1>
+          <h1>HELLO.</h1>
           <p>
             I am Val, a full stack software engineer specializing in frontend development. I use React with Typescript and Flutter with Dart on the frontend, and NodeJS/Express with Typescript on the backend.
             <br></br><br></br>
@@ -24,26 +27,26 @@ export const AboutMe = () => {
           </p>
         </div>
       </div>
-      <div className={styles.overlayDiv}>
-        <div className={styles.sectionHeader}>
-          <h1>
-            ABOUT ME
-          </h1>
-        </div>
-      </div>
+      {
+        isDesktop ? <div className={styles.socials}>
+          <SocialMedia />
+        </div> : null
+      }
     </section>
   )
 }
 
 const AboutMeAsset = () => {
-  const windowSize = useWindowDimensions();
-  const nonDesktop = (windowSize?.width ?? 0.0) <= screenBreakPoints.tabletMaxWidth;
 
-  if (nonDesktop) {
-    return <HorizontalImage src={dp} alt={'personal-picture'}/>
-  }
-  
   return (
-    <VerticalImage src={dp} alt={'personal-picture'}/>
+    <div className={styles.backgroundImage}>
+      <Image
+        src={dp}
+        alt='background-image'
+        layout='fill'
+        objectFit='cover'
+      >
+      </Image>
+    </div>
   )
 }
