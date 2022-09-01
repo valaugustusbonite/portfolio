@@ -1,0 +1,14 @@
+@use 'styles/variables';
+
+.wrapperContainer {
+  height: 100vh;
+  width: 100%;
+  background-color: variables.$dark-primary;
+}
+
+
+@media (min-width: variables.$tablet-max-width) {
+  .wrapperContainer {
+    height: 450px;
+  }
+}
