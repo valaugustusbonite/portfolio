@@ -26,6 +26,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 60px 0;
 
     .descriptionContainer {
       padding: 0 65px;
@@ -33,6 +34,7 @@
       h1 {
         font-size: 45px;
         font-weight: bold;
+        padding: 0;
         margin-bottom: 20px;
       }
   

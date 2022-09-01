@@ -1,0 +1,57 @@
+@use 'styles/variables';
+
+.educationContainer {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+  .sectionTitle {
+    border-bottom: solid 0.5px #fff;
+    padding-bottom: 20px;
+
+    h1 {
+      color: variables.$light-primary;
+      font-weight: 400;
+      font-size: 26px;
+    }
+  }
+
+  .sectionContent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .schoolSection {
+      h1 {
+        color: variables.$dark-accent;
+        font-weight: 300;
+        font-size: 66px;
+      }
+
+      p {
+        color: variables.$light-primary;
+        font-size: 22px;
+        font-weight: 400;
+      }
+    }
+
+    .credentials {
+      p {
+        color: variables.$light-primary;
+        font-weight: 100;
+      }
+
+      :nth-child(1) {  
+        font-weight: 700;
+      }
+
+      :nth-child(2) {  
+        font-weight: 700;
+      }
+    }
+  }
+}
