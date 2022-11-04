@@ -1,0 +1,52 @@
+@use 'styles/variables';
+
+.resumeSection {
+  height: 100%;
+  width: 100%;
+  padding: 0 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+ .subTitle {
+  p {
+    color: variables.$dark-accent;
+    font-size: 30;
+    font-weight: 600;
+  }
+ }
+
+ .mainText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  h3 {
+    color: variables.$light-primary;
+    font-weight: 700;
+    font-size: 45px;
+
+    .experience {
+      color: variables.$dark-accent;
+      border: none;
+      background-color: inherit;
+      font-weight: 700;
+      font-size: 45px;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      transition: 0.2s;
+      border-bottom: solid 2px variables.$dark-accent;
+    }
+
+    .experience:hover {
+        color: variables.$orange-accent;
+        border-bottom: solid 2px variables.$orange-accent;
+      }
+  }
+
+  .arrow {
+    padding: 0 20px;
+  }
+ }
+}
