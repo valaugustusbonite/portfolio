@@ -14,7 +14,7 @@ export const LandingPage = () => {
     <main className={styles.landingPage}>
       <NavbarSection />
       <MainTitleSection />
-      <FloatingImagesSection />
+      {/* <FloatingImagesSection /> */}
     </main>
   )
 }

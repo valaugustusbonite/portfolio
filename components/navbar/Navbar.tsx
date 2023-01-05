@@ -21,11 +21,11 @@ const NavbarMenu = () => {
   const windowSize = useWindowDimensions();
   const isDesktop = (windowSize?.width ?? 0.0) >= screenBreakPoints.desktopMaxWidth;
 
-  if (isDesktop) {
-    return(
-      <ExpandedMenu />
-    )
-  }
+  // if (isDesktop) {
+  //   return(
+  //     <ExpandedMenu />
+  //   )
+  // }
 
   return(
     <BurgerMenu />
